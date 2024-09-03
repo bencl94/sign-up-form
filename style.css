@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    outline: solid 1px black;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.picture {
+    flex: 1 1 100%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.picture p {
+    position: relative;
+    top: -2.5rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &>a {
+        color: whitesmoke;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:visited {
+            color: whitesmoke;
+        }
+    }
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 2 1 100%;
+}
+
+.greeting-container {
+    flex: 1 0 30%;
+    padding: 2rem;
+
+    &>p {
+        font-size: larger;
+        font-weight: 600;
+    }
+}
+
+.form-container {
+    flex: 1 0 50%;
+}
+
+.bottom-container {
+    flex: 1 0 20%;
+}
