@@ -1,28 +1,28 @@
 html {
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     outline: solid 1px black;
 }
 
 .content {
+    height: 100dvh;
     display: flex;
     flex-direction: row;
 }
 
 .picture {
-    flex: 1 1 100%;
+    flex: 1 1 40%;
 }
 
 img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .picture p {
@@ -53,7 +53,7 @@ img {
     display: flex;
     flex-direction: column;
 
-    flex: 2 1 100%;
+    flex: 2 1 60%;
 }
 
 .greeting-container {
