@@ -6,11 +6,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    outline: solid 1px black;
+    /* overflow: hidden; */
+    /* outline: solid 1px black; */
 }
 
 .content {
-    height: 100dvh;
+    max-height: 100dvh;
     display: flex;
     flex-direction: row;
 }
@@ -27,7 +28,7 @@ img {
 
 .picture p {
     position: relative;
-    top: -2.5rem;
+    top: -4rem;
     margin: 0;
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -52,24 +53,124 @@ img {
 .right-content {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
     flex: 2 1 60%;
 }
 
 .greeting-container {
-    flex: 1 0 30%;
-    padding: 2rem;
-
-    &>p {
-        font-size: larger;
-        font-weight: 600;
+    flex: 1 1 30dvh;
+    width: 100%;
+    background-color: #c8edd43b;
+    &>* {
+        margin-left: 2rem;
     }
 }
 
-.form-container {
-    flex: 1 0 50%;
+h3 {
+    font-size: x-large;
+    font-weight: 600;
+    margin-right: 2rem;
 }
 
-.bottom-container {
-    flex: 1 0 20%;
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 70dvh;
+    width: 100%;
+    &>* {
+        margin-left: 2rem;
+    }
+    
+    &>div{
+        background-color: #ebeff1;
+    }    
+}
+
+.form-container>form {
+    margin-bottom: 2rem;
+    flex: 1 1 60%;
+}
+
+.form-container>div {
+    flex: 1 1 40%;
+    width: 100%;
+    background-color: #c8edd43b;
+}
+
+.form-container button{
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgb(87,139,77);
+    padding: 16px 48px;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.form-row {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form-row div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 35%;
+    margin-right: 1rem;
+
+    &>*{
+        flex: 1 1 50%
+    }
+}
+
+.form-row input {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-row label {
+    margin: 1rem 0 0.5rem 0;
+    text-transform: uppercase;
+}
+
+.bottom-section {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    &>* {
+        margin-left: 2rem;
+    }
+}
+
+.bottom-section p {
+    font-weight: 600;
+}
+
+.bottom-section a {
+    color: rgb(87,139,77);
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: rgb(87,139,77);
+    }
+}
+
+.form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid {
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none; /* Remove default red glow in Firefox */
 }
